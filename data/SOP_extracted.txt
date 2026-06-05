@@ -1,0 +1,186 @@
+Standard Operating Procedure
+Interest Rate Change Process – Lending Products
+Field | Details
+Document ID | SOP-BANK-RC-007
+Version | 3.2
+Effective Date | 01-June-2026
+Review Date | 01-June-2027
+Owner | Chief Lending Officer
+Department | Retail & Commercial Lending
+Frequency | As triggered by Fed rate changes or internal pricing review
+Applies To | Indirect Auto | Direct Auto | Business Banking
+
+1. Purpose
+This SOP defines the end-to-end process for reviewing, approving, communicating, and implementing interest rate changes across three lending product categories: Indirect Auto, Direct Auto, and Business Banking. It ensures changes are controlled, compliant, auditable, and communicated to all relevant stakeholders within required timeframes.
+2. Scope
+This procedure applies whenever a rate change is initiated due to:
+Federal Reserve benchmark rate adjustments (Fed Funds Rate / Prime Rate)
+Internal pricing strategy decisions approved by the ALCO committee
+Competitive market rate realignment
+Regulatory or compliance-driven repricing requirements
+Product-specific performance review outcomes
+Product categories in scope:
+Indirect Auto Lending – Dealer-originated vehicle loans
+Direct Auto Lending – Branch and digital channel vehicle loans
+Business Banking – Commercial loans, lines of credit, and term loans for small-to-mid businesses
+3. Roles & Responsibilities
+Role | Responsibility | Name / Contact
+Chief Lending Officer (CLO) | Final approval authority for all rate changes | Robert Harrington / r.harrington@bank.com
+ALCO Committee | Reviews and recommends rate changes; meets bi-weekly | alco@bank.com
+Pricing & Analytics Team | Runs rate impact models; prepares rate change memo | pricing@bank.com
+Indirect Auto – Product Manager | Manages dealer rate sheets; communicates to dealer network | Linda Cho / l.cho@bank.com
+Direct Auto – Product Manager | Updates branch/digital rate boards; trains branch staff | Marcus Webb / m.webb@bank.com
+Business Banking – Relationship Mgr | Notifies business clients; manages repricing agreements | Anita Patel / a.patel@bank.com
+IT / Core Banking Team | Implements rate changes in core system (FiServ/Jack Henry) | corebanking@bank.com
+Compliance & Legal | Reviews change for regulatory compliance before go-live | compliance@bank.com
+Risk Management | Reviews credit risk impact of proposed rate changes | risk@bank.com
+Customer Communications Team | Drafts and sends customer notices (mail, email, in-app) | comms@bank.com
+
+4. Rate Change Trigger Criteria
+Trigger Type | Example | Who Initiates | Urgency
+Fed Rate Change | FOMC raises Fed Funds Rate by 25bps | CLO / Pricing Team | High – act within 2 business days
+Internal ALCO Decision | Board-approved margin compression review | ALCO Committee | Standard – 5 business days
+Competitive Pressure | Competitor drops auto rates; volume declining | Product Managers | Standard – 5 business days
+Regulatory Directive | Regulator mandates max rate cap on consumer loans | Compliance | Urgent – act within 24 hours
+Product Review | Quarterly review shows Business Banking ROE below target | Risk / CLO | Standard – 5 business days
+
+5. Step-by-Step Rate Change Process
+Step 1 – Trigger Identification & Rate Change Request
+Identify the trigger (Fed announcement, ALCO meeting outcome, or product manager request).
+Pricing & Analytics Team prepares a Rate Change Memo within 1 business day of trigger.
+Memo must include: proposed new rate(s), effective date, rationale, impacted products, estimated volume/revenue impact.
+Submit the Rate Change Memo to CLO via the Rate Change Request form in the Lending Portal.
+CLO acknowledges receipt and assigns a Rate Change ID (e.g., RC-2026-047).
+Step 2 – Impact Analysis & Risk Review
+Pricing Team runs financial model: net interest margin (NIM) impact, loan demand sensitivity, competitor rate comparison.
+Risk Management reviews credit quality impact — does the new rate affect applicant creditworthiness thresholds?
+Compliance reviews proposed rates against: ECOA, Reg Z, state usury limits, MLA caps (for eligible borrowers).
+All three teams submit sign-off in the Lending Portal within 2 business days.
+If any team flags a concern, a resolution meeting is scheduled within 1 business day.
+Step 3 – ALCO / CLO Approval
+Rate Change Memo + all sign-offs presented to ALCO at next scheduled meeting (or emergency call for urgent triggers).
+ALCO votes: Approve / Reject / Defer with modified parameters.
+CLO countersigns approval in the Lending Portal — this is the binding authorization.
+Approved rate change logged in the Rate Change Register with Rate Change ID, approved rates, and effective date.
+If rejected: Pricing Team revises and resubmits. Process restarts from Step 2.
+Step 4 – Core System Update (IT)
+IT receives system change ticket automatically from Lending Portal upon CLO approval.
+IT updates rate tables in core banking system (FiServ Precision / Jack Henry Symitar) in UAT environment first.
+Pricing Team validates UAT: spot-check 10 loan scenarios across all 3 product categories.
+UAT sign-off submitted by Pricing Team in the Lending Portal.
+IT deploys rate changes to PRODUCTION no earlier than 6:00 PM the day before the effective date.
+IT confirms successful deployment and logs completion in the Rate Change ticket.
+Post-deployment: IT monitors system for 2 hours after go-live; any errors trigger immediate rollback.
+Step 5 – Product-Specific Communication & Implementation
+Each product category follows its own communication protocol:
+5A – Indirect Auto
+Indirect Auto Product Manager downloads updated Dealer Rate Sheet from the Lending Portal.
+Rate sheet sent to all active dealer partners via secure email (DealerTrack portal notification) by 5:00 PM the day before effective date.
+Subject line format: [RATE UPDATE] New Dealer Rate Sheet Effective [Date] – RC-2026-047
+Call or voicemail sent to top 20 dealers (by volume) personally by the Indirect Auto Manager.
+Dealer portal (DealerTrack) updated with new rate matrix by IT by 8:00 AM on effective date.
+Dealers must submit any in-flight applications under old rates before 11:59 PM on the day prior to effective date.
+Applications submitted after cut-off are automatically priced at the new rates.
+5B – Direct Auto
+Direct Auto Product Manager updates branch rate boards (physical and digital) — submit update request to Marketing by 3:00 PM the day before.
+Update digital rate display on bank website and mobile app — submit to IT by 3:00 PM the day before.
+Branch Operations team notified via internal email with new rate table and FAQ document.
+Loan officers attend a 15-minute rate briefing call at 8:30 AM on effective date.
+Any loan application in underwriting that has not received a credit decision by effective date is repriced at new rates — applicant notified within 24 hours.
+Existing pre-approvals that expire after effective date must be re-issued at new rates.
+5C – Business Banking
+Business Banking Relationship Managers (RMs) pull list of all floating-rate business loans from core system.
+For floating-rate (Prime-linked) loans: system automatically adjusts rate on effective date — no manual action required.
+RMs send personalized written notice to all affected business clients at least 5 business days before effective date (required by loan agreements).
+Notice template: use approved template from Compliance (Template ID: CC-BB-RATE-01); do NOT modify without Compliance sign-off.
+For fixed-rate loan repricing (new originations only): RM updates rate quote in the Loan Origination System (LOS).
+For lines of credit: updated rate reflected on next billing cycle statement.
+RM documents client communication in CRM (Salesforce) within 24 hours.
+Step 6 – Post-Implementation Verification
+Pricing Team pulls sample report from core system on effective date +1 to verify new rates are applied correctly.
+Verify 5 loan accounts per product category (15 total): check rate displayed matches approved rate.
+Check customer-facing channels: website, mobile app, branch digital boards all show new rates.
+IT runs automated comparison: new loan originations priced at new rate vs. rate table — flag any mismatches.
+Any discrepancy triggers immediate IT hotfix and incident report filed within 2 hours.
+Verification completion report submitted to CLO and Compliance by end of day on effective date +1.
+Step 7 – Audit & Record Keeping
+Rate Change Register updated with: final rates implemented, effective date, and verification confirmation.
+All documents (memo, approvals, sign-offs, communications) stored in SharePoint: Lending > Rate Changes > [Year] > RC-2026-047.
+Retention period: 7 years (per regulatory requirements).
+Compliance performs quarterly audit of Rate Change Register — any gaps must be remediated within 30 days.
+6. Rate Structures by Product Category
+6A – Indirect Auto Rates
+Rates are tiered by credit tier and loan term. Example structure (post-change):
+Credit Tier | FICO Range | 24–36 Months | 37–48 Months | 49–60 Months | 61–72 Months
+Tier 1 – Super Prime | 750+ | 5.49% | 5.74% | 5.99% | 6.49%
+Tier 2 – Prime | 700–749 | 6.24% | 6.49% | 6.74% | 7.24%
+Tier 3 – Near Prime | 650–699 | 7.99% | 8.49% | 8.99% | 9.49%
+Tier 4 – Sub Prime | 600–649 | 10.49% | 10.99% | 11.49% | 12.49%
+Tier 5 – Deep Sub | Below 600 | 13.99% | 14.49% | 14.99% | N/A
+
+6B – Direct Auto Rates
+Direct auto rates are generally 25–50bps lower than indirect (no dealer markup). Example structure:
+Credit Tier | FICO Range | Up to 48 Months | 49–60 Months | 61–72 Months | 73–84 Months
+Tier 1 – Excellent | 750+ | 5.24% | 5.49% | 5.99% | 6.49%
+Tier 2 – Good | 700–749 | 5.99% | 6.24% | 6.74% | 7.24%
+Tier 3 – Fair | 650–699 | 7.74% | 8.24% | 8.74% | 9.24%
+Tier 4 – Poor | 600–649 | 10.24% | 10.74% | 11.24% | N/A
+
+6C – Business Banking Rates
+Business rates are indexed to Prime Rate or SOFR. Example structure:
+Product | Index | Spread | Effective Rate (Prime=8.5%) | Max Rate
+Business Line of Credit | Prime | Prime + 1.5% | 10.00% | 18.00%
+SBA 7(a) Loan | Prime | Prime + 2.75% | 11.25% | Prime + 2.75%
+Commercial Term Loan | SOFR | SOFR + 3.00% | 8.35% | 21.00%
+Commercial Real Estate | SOFR | SOFR + 2.50% | 7.85% | 18.00%
+Equipment Financing | Prime | Prime + 2.00% | 10.50% | 18.00%
+
+7. What To Do If Stuck
+Situation | Who to Contact | Action
+Core system not updated on effective date | IT Core Banking (corebanking@bank.com) | Call IT hotline; initiate incident ticket; notify CLO; consider temporary rate freeze
+Dealer claims they did not receive rate sheet | Indirect Auto PM (l.cho@bank.com) | Resend immediately; check DealerTrack portal; document in Rate Change log
+Business client disputes rate change | Relationship Manager + Compliance | Pull loan agreement; verify notice was sent 5 days prior; escalate to CLO if disputed
+Compliance flags a rate as exceeding usury limit | Compliance (compliance@bank.com) | Immediately pause that product's rate change; convene emergency ALCO call within 4 hours
+ALCO cannot reach quorum for approval | CLO / Board Secretary | CLO can grant emergency approval for Fed-driven changes; document exception
+Rate change applied to wrong loan accounts | IT + Pricing Team | Trigger rollback; freeze new originations; notify Compliance; remediate within 24 hours
+Uncertain which rate tier applies to a customer | Pricing Team (pricing@bank.com) | Use Tier Calculator in Lending Portal; do not manually override without manager approval
+Rate change needed outside normal business hours | On-call IT lead (via PagerDuty) | CLO provides verbal authorization; IT implements; written approval logged next business day
+
+8. Task Frequency & Schedule
+Task | Frequency | Owner
+Monitor Fed Funds Rate announcements (FOMC calendar) | 8 times per year (FOMC schedule) | CLO / Pricing Team
+Internal pricing review | Quarterly | ALCO Committee
+Competitor rate benchmarking report | Monthly | Pricing & Analytics Team
+Dealer Rate Sheet distribution | Per rate change event | Indirect Auto PM
+Branch rate board update verification | Per rate change event + monthly audit | Direct Auto PM
+Business client floating-rate notification | Per rate change event (5 days prior) | Relationship Managers
+Post-implementation verification report | Within 1 day of effective date | Pricing Team + IT
+Rate Change Register audit | Quarterly | Compliance
+SOP review and update | Annually or after any major incident | CLO
+
+9. Compliance & Regulatory Requirements
+Regulation | Applies To | Key Requirement
+Regulation Z (TILA) | Direct Auto, Indirect Auto | Disclose APR and finance charge changes in writing before effective date
+Equal Credit Opportunity Act (ECOA) | All products | Rate tiers must be based on creditworthiness only; no disparate impact
+Military Lending Act (MLA) | Direct & Indirect Auto | Max 36% MAPR for covered borrowers; verify status before pricing
+State Usury Laws | All products | Rate must not exceed state-mandated maximum; varies by state
+Flood Disaster Protection Act | Business Banking (RE-secured) | Rate change notifications for flood-zone collateral
+UCC Article 9 | Business Banking | Secured collateral terms must be updated in loan docs if rate changes structure
+CFPB Supervisory Guidelines | All consumer products | Rate change communications must be clear, conspicuous, and non-deceptive
+
+10. Key Contacts & Escalation Matrix
+Level | Role | Contact | When to Escalate
+L1 | Product Manager (per category) | See Section 3 | Rate sheet errors, dealer/branch questions, client inquiries
+L2 | Pricing & Analytics Team | pricing@bank.com | Rate calculation disputes, model questions, tier eligibility
+L3 | Compliance & Legal | compliance@bank.com | Regulatory concerns, client disputes, documentation issues
+L4 | Chief Lending Officer | r.harrington@bank.com | ext. 5001 | Approval failures, ALCO disputes, emergency rate freeze
+L5 | Chief Risk Officer | cro@bank.com | Systemic risk concerns, large-scale repricing disputes
+Emergency | IT On-Call (PagerDuty) | Via PagerDuty | Core system failures, incorrect rate application in production
+
+11. Document Change Log
+Version | Date | Author | Summary of Changes
+1.0 | Mar 2022 | R. Harrington | Initial version – Indirect Auto only
+2.0 | Sep 2023 | A. Patel | Added Business Banking rate change process
+3.0 | Jan 2025 | L. Cho | Added Direct Auto; restructured product-specific steps
+3.1 | Nov 2025 | Compliance | Added MLA and ECOA compliance table; updated usury guidance
+3.2 | Jun 2026 | Pricing Team | Updated rate tables; added SOFR-indexed Business Banking products; added post-implementation verification step
