@@ -1,2 +1,3 @@
 # agentic-sop-assistant
 Agentic SOP Intelligence Assistant using Claude
+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
