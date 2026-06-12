@@ -13,10 +13,7 @@ from groq import Groq
 
 # ── Config ─────────────────────────────────────────────────────────────
 SOP_FILE   = os.path.join("data", "SOP_extracted.txt")
-# OLD - change this line
-# NEW - replace with this
-MODEL = "llama-3.3-70b-versatile"
-# Groq's LLaMA 3 70B model (free)
+MODEL      = "llama3-70b-8192"   # Groq's LLaMA 3 70B model (free)
 MAX_TOKENS = 1024
 
 
