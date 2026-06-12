@@ -1,0 +1,251 @@
+================================================================
+  HACKATHON PITCH SCRIPT
+  Project: Agentic SOP Intelligence & Decision Support Assistant
+  EXL Hackathon 2026
+  Presenter: Rohit Kankhedia
+  Total Time: ~5-7 minutes
+================================================================
+
+TIP: Practice this 2-3 times before presenting.
+     Speak slowly and confidently. Pause after key lines.
+     Have the web app already open and ready in the browser.
+
+
+----------------------------------------------------------------
+PART 1 — OPENING / HOOK  (30 seconds)
+----------------------------------------------------------------
+
+"Imagine you are a new bank operations analyst.
+ It's your first week. A Fed rate change just dropped.
+ Your manager says — update the dealer rate sheets,
+ notify the business clients, make sure we are compliant.
+
+ You open a 20-page Word document called 'SOP'.
+ You start reading from page 1.
+ Meanwhile — the clock is ticking.
+
+ This is the reality for thousands of banking operations
+ staff every single time a rate change happens."
+
+[PAUSE — let it land]
+
+"We built a solution for that."
+
+
+----------------------------------------------------------------
+PART 2 — PROBLEM STATEMENT  (45 seconds)
+----------------------------------------------------------------
+
+"The problem is simple but costly:
+
+ SOPs are stored as static Word documents.
+ They are hard to navigate under pressure.
+ Staff waste time searching for the right step,
+ the right contact, the right compliance rule.
+
+ And when the SOP gets updated?
+ Most staff don't even know it changed.
+
+ This leads to:
+   — Process errors
+   — Missed escalations
+   — Compliance violations
+   — Longer resolution times
+
+ All because a document wasn't easy to use."
+
+
+----------------------------------------------------------------
+PART 3 — SOLUTION INTRO  (30 seconds)
+----------------------------------------------------------------
+
+"We built the Agentic SOP Intelligence Assistant.
+
+ It ingests your existing SOP Word documents —
+ no migration, no retraining, no new systems.
+
+ It gives your staff an AI chatbot they can ask
+ any question about the SOP — and get an instant,
+ accurate answer sourced only from that document.
+
+ Let me show you how it works."
+
+
+----------------------------------------------------------------
+PART 4 — LIVE DEMO  (2-3 minutes)
+----------------------------------------------------------------
+
+[Open the browser. Show the Streamlit app.]
+
+--- DEMO STEP 1: Show the interface ---
+"This is our web interface. Clean, simple.
+ On the left — settings and sample questions.
+ On the right — the chat window.
+
+ Notice the product category filter here.
+ A staff member working on Indirect Auto
+ can filter to just that category."
+
+--- DEMO STEP 2: Ask a process question ---
+[Type or click: "What is the first step in the rate change process?"]
+
+"I'll ask a basic process question first."
+
+[Wait for answer. Point to the blue badge.]
+
+"Notice this blue badge — 'Task Guidance Agent'.
+ Our system automatically detected this was a process question
+ and routed it to the right specialist agent."
+
+--- DEMO STEP 3: Ask an escalation question ---
+[Type or click: "Who do I contact if the core system is not updated on time?"]
+
+"Now a trickier question — what if something goes wrong?"
+
+[Wait for answer. Point to the red badge.]
+
+"Red badge — Escalation Agent.
+ It gives the exact contact, the exact action,
+ pulled directly from the SOP."
+
+--- DEMO STEP 4: Ask a compliance question ---
+[Type or click: "What compliance regulations apply to Direct Auto?"]
+
+"And now a compliance question."
+
+[Wait for answer. Point to the green badge.]
+
+"Green badge — Compliance Agent.
+ It cites the exact regulation — Reg Z, ECOA, MLA —
+ from the SOP. No hallucination. No outside knowledge."
+
+--- DEMO STEP 5: Mention SOP auto-refresh ---
+"One more thing — if we update the Word document
+ and save it, the system detects the change automatically
+ and reloads the latest SOP in the background.
+ No restart. No manual intervention."
+
+
+----------------------------------------------------------------
+PART 5 — ARCHITECTURE  (45 seconds)
+----------------------------------------------------------------
+
+"Under the hood, here is how it works:
+
+ Every question goes through a Router Agent first.
+ The router reads the question and decides —
+ is this about process? Escalation? Compliance?
+
+ It then sends the question to the right specialist agent.
+ Each agent has its own focused system prompt
+ and answers only from the SOP document.
+
+ We use LLaMA 3.3 70B via Groq for inference —
+ fast, free, and no data leaves to a paid API.
+
+ The SOP Watcher agent monitors the Word document
+ for changes and triggers an automatic reload.
+
+ Everything is built in Python.
+ No new infrastructure needed.
+ It works with any existing Word SOP."
+
+
+----------------------------------------------------------------
+PART 6 — BUSINESS IMPACT  (30 seconds)
+----------------------------------------------------------------
+
+"What does this mean for EXL and its banking clients?
+
+ Faster execution — staff get answers in seconds,
+ not minutes of document searching.
+
+ Fewer errors — answers come only from the approved SOP,
+ not from memory or assumption.
+
+ Audit-ready — every answer is traceable to the source document.
+
+ And when regulations change?
+ Update the Word document.
+ The chatbot updates automatically."
+
+
+----------------------------------------------------------------
+PART 7 — CLOSING / CALL TO ACTION  (20 seconds)
+----------------------------------------------------------------
+
+"We started with a 20-page Word document
+ and a staff member who didn't know where to begin.
+
+ We turned that into a live AI assistant
+ that guides them step by step —
+ who to call, what to do, and whether it's compliant.
+
+ This is the Agentic SOP Intelligence Assistant.
+ Thank you."
+
+[SMILE. PAUSE. Take questions.]
+
+
+================================================================
+  LIKELY JUDGE QUESTIONS — AND HOW TO ANSWER THEM
+================================================================
+
+Q: What if the answer is wrong?
+A: "The system is instructed to answer ONLY from the SOP text.
+    If the information is not in the SOP, it says so explicitly.
+    It cannot hallucinate facts that aren't in the document."
+
+Q: What LLM are you using?
+A: "LLaMA 3.3 70B, hosted on Groq's free inference API.
+    The architecture is model-agnostic — we can swap in
+    Claude, GPT-4, or a private on-premise model with
+    one line of code change."
+
+Q: How is this different from just searching the document?
+A: "Search finds keywords. Our system understands intent.
+    If you ask 'what do I do if I'm stuck?', search returns
+    every page with the word 'stuck'. Our agent returns
+    the exact action, the exact contact, from the right section."
+
+Q: Can it handle multiple SOPs?
+A: "Not yet in this prototype, but it's on our roadmap.
+    The architecture supports it — we would chunk and index
+    multiple documents and route based on topic."
+
+Q: Is this secure? Does data leave the bank?
+A: "In production, this would run with a private LLM
+    on the bank's own infrastructure — nothing leaves
+    the internal network. For this demo we use Groq."
+
+Q: How long did this take to build?
+A: "The core prototype was built in one hackathon session.
+    The architecture is clean enough that adding new SOPs,
+    new agents, or a new UI takes hours, not weeks."
+
+
+================================================================
+  PRE-DEMO CHECKLIST  (do this 5 minutes before presenting)
+================================================================
+
+[ ] Browser open at http://localhost:8501
+[ ] App is running (streamlit run chatbot/app.py)
+[ ] GROQ_API_KEY is set in the terminal
+[ ] Category set to "All Categories" in sidebar
+[ ] Chat history cleared (click Clear chat)
+[ ] Test one question before going on stage
+[ ] GitHub repo open in second tab (shows README)
+[ ] This script printed or on your phone for quick reference
+
+================================================================
+  KEY PHRASES TO REMEMBER  (if you forget the script)
+================================================================
+
+Opening:   "Imagine you are a new analyst. Rate change drops. Clock ticking."
+Problem:   "Static Word docs. Hard to navigate under pressure."
+Solution:  "Ask any question. Get an answer from the SOP. Instantly."
+Agents:    "Router decides. Specialist agent answers. Badge shows which one."
+Impact:    "Faster execution. Fewer errors. Audit-ready."
+Closing:   "We turned a 20-page Word doc into a live AI assistant."
+
+================================================================
