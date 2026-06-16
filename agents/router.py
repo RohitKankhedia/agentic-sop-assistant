@@ -1,18 +1,16 @@
 """
 router.py
 ---------
-Looks at the user's question and decides which specialist
+Reads the user's question and decides which specialist
 agent should handle it.
 
-Agents available:
-  - guidance    : next steps, how-to, process questions
-  - escalation  : who to contact, escalation paths, ownership
-  - compliance  : regulations, legal requirements, audit
-  - general     : anything else about the SOP
+Agents:
+  guidance    — next steps, how-to, process, timelines
+  escalation  — who to contact, escalation paths, ownership
+  compliance  — regulations, legal, audit requirements
+  email       — drafting emails, writing messages
+  general     — anything else
 """
-
-from groq import Groq
-import os
 
 MODEL = "llama-3.3-70b-versatile"
 
@@ -20,16 +18,15 @@ ROUTER_PROMPT = """You are a routing assistant. Read the user's question and dec
 
 Choose exactly ONE of these agents:
 - guidance    : questions about steps, process, what to do next, how to handle a situation, timelines, frequency
-- escalation  : questions about who to contact, who is responsible, escalation paths, contacts, emails, phone numbers, ownership
+- escalation  : questions about who to contact, who is responsible, escalation paths, contacts, emails, phone numbers
 - compliance  : questions about regulations, legal requirements, compliance rules, audit, ECOA, Reg Z, MLA, usury
-- general     : any other SOP question that doesn't fit above
+- email       : user wants to draft or write an email, message, or communication to someone
+- general     : any other SOP question
 
-Reply with ONLY the agent name — nothing else. No explanation.
-Example reply: guidance
+Reply with ONLY the agent name. No explanation, no punctuation.
 """
 
-def route(question: str, client: Groq) -> str:
-    """Returns the agent name that should handle this question."""
+def route(question: str, client) -> str:
     response = client.chat.completions.create(
         model=MODEL,
         messages=[
@@ -40,7 +37,5 @@ def route(question: str, client: Groq) -> str:
         temperature=0.0,
     )
     agent = response.choices[0].message.content.strip().lower()
-
-    # Safety fallback — if model returns something unexpected
-    valid = {"guidance", "escalation", "compliance", "general"}
+    valid = {"guidance", "escalation", "compliance", "email", "general"}
     return agent if agent in valid else "general"
