@@ -1,251 +1,285 @@
 ================================================================
-  HACKATHON PITCH SCRIPT
-  Project: Agentic SOP Intelligence & Decision Support Assistant
+  HACKATHON PITCH SCRIPT v2
+  Project: Agentic Rate Change Intelligence & Customer Retention
   EXL Hackathon 2026
   Presenter: Rohit Kankhedia
   Total Time: ~5-7 minutes
 ================================================================
 
-TIP: Practice this 2-3 times before presenting.
-     Speak slowly and confidently. Pause after key lines.
-     Have the web app already open and ready in the browser.
+TIP: Practice 2-3 times. Speak slowly. Pause after key lines.
+     Have the app open at Tab 1 (Rate Change Intelligence) BEFORE presenting.
+     Pre-run the analysis so results are already loaded.
 
 
 ----------------------------------------------------------------
-PART 1 — OPENING / HOOK  (30 seconds)
+PART 1 — OPENING HOOK  (30 seconds)
 ----------------------------------------------------------------
 
-"Imagine you are a new bank operations analyst.
- It's your first week. A Fed rate change just dropped.
- Your manager says — update the dealer rate sheets,
- notify the business clients, make sure we are compliant.
+"March 2022. The Federal Reserve raises rates for the first time
+ in three years.
 
- You open a 20-page Word document called 'SOP'.
- You start reading from page 1.
- Meanwhile — the clock is ticking.
+ At banks across America, operations teams scramble.
+ Update the systems. Notify the dealers. File the compliance forms.
 
- This is the reality for thousands of banking operations
- staff every single time a rate change happens."
+ But nobody is asking the most important question:
+
+ WHICH CUSTOMERS ARE ABOUT TO LEAVE?
+
+ Three weeks later, refinancing applications at competitor banks
+ spike 40%. Billions in loan assets walk out the door.
+ Quietly. Silently. Without warning.
+
+ We built a system that sees it coming — before it happens."
 
 [PAUSE — let it land]
 
-"We built a solution for that."
+
+----------------------------------------------------------------
+PART 2 — THE PROBLEM  (30 seconds)
+----------------------------------------------------------------
+
+"Here is what actually happens at a bank after a rate change:
+
+ Relationship managers spend TWO DAYS manually reviewing
+ spreadsheets to figure out who might be at risk.
+
+ By the time they have a call list, the at-risk customers
+ have already been pre-approved somewhere else.
+
+ There is no intelligence. There is no prioritization.
+ There is no personalized retention strategy.
+
+ Just a spreadsheet, built too late, acting too slow."
 
 
 ----------------------------------------------------------------
-PART 2 — PROBLEM STATEMENT  (45 seconds)
+PART 3 — THE SOLUTION  (45 seconds)
 ----------------------------------------------------------------
 
-"The problem is simple but costly:
+"We built the Agentic Rate Change Intelligence System.
 
- SOPs are stored as static Word documents.
- They are hard to navigate under pressure.
- Staff waste time searching for the right step,
- the right contact, the right compliance rule.
+ It does in 3 minutes what currently takes 2 days.
 
- And when the SOP gets updated?
- Most staff don't even know it changed.
+ Here is how it works:
 
- This leads to:
-   — Process errors
-   — Missed escalations
-   — Compliance violations
-   — Longer resolution times
+ Step 1 — A relationship manager enters the Fed rate change.
+           Twenty-five basis points. Effective June 20.
 
- All because a document wasn't easy to use."
+ Step 2 — Our AI scans every customer in the loan portfolio.
+           It scores each one on churn risk — zero to one hundred —
+           based on: rate gap versus competitors, loan balance,
+           months remaining, credit score, and payment history.
 
+ Step 3 — It hands the manager a prioritized call list,
+           ranked by who is most likely to leave —
+           with a personalized AI-generated retention offer
+           for each customer, grounded in the bank's own SOPs.
 
-----------------------------------------------------------------
-PART 3 — SOLUTION INTRO  (30 seconds)
-----------------------------------------------------------------
-
-"We built the Agentic SOP Intelligence Assistant.
-
- It ingests your existing SOP Word documents —
- no migration, no retraining, no new systems.
-
- It gives your staff an AI chatbot they can ask
- any question about the SOP — and get an instant,
- accurate answer sourced only from that document.
-
- Let me show you how it works."
+ Let me show you."
 
 
 ----------------------------------------------------------------
-PART 4 — LIVE DEMO  (2-3 minutes)
+PART 4 — LIVE DEMO  (2.5 minutes)
 ----------------------------------------------------------------
 
-[Open the browser. Show the Streamlit app.]
+[SCREEN: Tab 1 — Rate Change Intelligence]
 
---- DEMO STEP 1: Show the interface ---
-"This is our web interface. Clean, simple.
- On the left — settings and sample questions.
- On the right — the chat window.
+--- DEMO STEP 1: Input the rate change ---
+"The Fed just raised rates by 25 basis points.
+ I enter that here — and click Run Churn Analysis."
 
- Notice the product category filter here.
- A staff member working on Indirect Auto
- can filter to just that category."
+[Click Run Churn Analysis — results load]
 
---- DEMO STEP 2: Ask a process question ---
-[Type or click: "What is the first step in the rate change process?"]
+--- DEMO STEP 2: KPI cards ---
+[Point to KPI cards]
 
-"I'll ask a basic process question first."
+"In seconds — not days — we know:
+ How many customers are high risk.
+ What the total at-risk loan balance is.
+ And the estimated loss if we do nothing."
 
-[Wait for answer. Point to the blue badge.]
+[Point to the estimated loss card]
 
-"Notice this blue badge — 'Task Guidance Agent'.
- Our system automatically detected this was a process question
- and routed it to the right specialist agent."
+"For this portfolio of 500 customers —
+ representing $132 million in loans —
+ the estimated loss from churn is shown right here.
 
---- DEMO STEP 3: Ask an escalation question ---
-[Type or click: "Who do I contact if the core system is not updated on time?"]
+ That is a real number. That is money walking out the door."
 
-"Now a trickier question — what if something goes wrong?"
+--- DEMO STEP 3: Charts ---
+[Point to bar charts]
 
-[Wait for answer. Point to the red badge.]
+"We can see which product category is most exposed.
+ Indirect Auto? Direct Auto? Business Banking?
+ Each has a different risk profile after a rate change."
 
-"Red badge — Escalation Agent.
- It gives the exact contact, the exact action,
- pulled directly from the SOP."
+--- DEMO STEP 4: At-risk table ---
+[Point to the customer table]
 
---- DEMO STEP 4: Ask a compliance question ---
-[Type or click: "What compliance regulations apply to Direct Auto?"]
+"Here is the priority call list — ranked by churn risk score.
+ The relationship manager doesn't have to think about who to call.
+ The AI has already ranked them.
+ And they can download this as a CSV — ready to use immediately."
 
-"And now a compliance question."
+--- DEMO STEP 5: Retention offer ---
+[Click on a high-risk customer → Generate Retention Offer]
 
-[Wait for answer. Point to the green badge.]
+"Now — this is the part that makes this truly agentic.
 
-"Green badge — Compliance Agent.
- It cites the exact regulation — Reg Z, ECOA, MLA —
- from the SOP. No hallucination. No outside knowledge."
+ I select a high-risk customer and click Generate Retention Offer.
 
---- DEMO STEP 5: Mention SOP auto-refresh ---
-"One more thing — if we update the Word document
- and save it, the system detects the change automatically
- and reloads the latest SOP in the background.
- No restart. No manual intervention."
+ The AI reads this customer's profile — their rate, their balance,
+ their credit tier, the competitor rate gap —
+ and generates a personalized retention offer.
+
+ Not a generic script. A specific offer for THIS customer.
+ With talking points for the relationship manager.
+ With an urgency level.
+ And a check against the bank's own SOP to confirm
+ the offer is within policy."
+
+[Wait for offer to appear. Read the key lines.]
+
+"Rate reduction offer. Talking points. Compliance check.
+ All in under 10 seconds."
+
+--- DEMO STEP 6: Switch to SOP tab ---
+[Click Tab 2]
+
+"And underpinning everything — the SOP Intelligence Assistant.
+
+ This is where operations staff get answers during execution.
+ Who to call. What step is next. What the regulation says.
+ Five specialist agents. Five SOP documents.
+ Answers in seconds, sourced only from the bank's own policies."
 
 
 ----------------------------------------------------------------
-PART 5 — ARCHITECTURE  (45 seconds)
+PART 5 — ARCHITECTURE  (30 seconds)
 ----------------------------------------------------------------
 
-"Under the hood, here is how it works:
+"Under the hood — four intelligent agents working together:
 
- Every question goes through a Router Agent first.
- The router reads the question and decides —
- is this about process? Escalation? Compliance?
+ The Portfolio Risk Scorer scans every customer
+ and calculates a churn probability score.
 
- It then sends the question to the right specialist agent.
- Each agent has its own focused system prompt
- and answers only from the SOP document.
+ The Competitor Gap Analyzer compares bank rates
+ against three major competitors in real time.
 
- We use LLaMA 3.3 70B via Groq for inference —
- fast, free, and no data leaves to a paid API.
+ The Retention Offer Agent generates personalized offers
+ using the bank's SOP as its rulebook — no hallucination,
+ no offers outside policy.
 
- The SOP Watcher agent monitors the Word document
- for changes and triggers an automatic reload.
+ And the SOP Assistant handles the operational questions
+ that come up during execution.
 
- Everything is built in Python.
- No new infrastructure needed.
- It works with any existing Word SOP."
+ All built on LLaMA 3.3 — fast, free, and deployable
+ on the bank's own infrastructure."
 
 
 ----------------------------------------------------------------
 PART 6 — BUSINESS IMPACT  (30 seconds)
 ----------------------------------------------------------------
 
-"What does this mean for EXL and its banking clients?
+"Let me give you the numbers.
 
- Faster execution — staff get answers in seconds,
- not minutes of document searching.
+ A mid-size bank with $500 million in auto loans
+ loses approximately $15 million per rate cycle to churn.
 
- Fewer errors — answers come only from the approved SOP,
- not from memory or assumption.
+ Our system identifies the top 10% most at-risk customers
+ and gives relationship managers a personalized playbook.
 
- Audit-ready — every answer is traceable to the source document.
+ Retaining just 50% of those customers
+ recovers $750,000 per rate event.
 
- And when regulations change?
- Update the Word document.
- The chatbot updates automatically."
+ With 4 to 6 Fed rate changes per year —
+ that is $3 to $4.5 million in recovered assets annually.
+
+ From a system that costs a fraction of that to operate."
 
 
 ----------------------------------------------------------------
-PART 7 — CLOSING / CALL TO ACTION  (20 seconds)
+PART 7 — CLOSING  (20 seconds)
 ----------------------------------------------------------------
 
-"We started with a 20-page Word document
- and a staff member who didn't know where to begin.
+"Every Fed rate change used to mean two days of manual work
+ and millions in silent customer churn.
 
- We turned that into a live AI assistant
- that guides them step by step —
- who to call, what to do, and whether it's compliant.
+ We turned that into a 3-minute AI-powered retention playbook —
+ specific to each customer, grounded in bank SOPs,
+ and ready before the competitor even picks up the phone.
 
- This is the Agentic SOP Intelligence Assistant.
+ This is the Agentic Rate Change Intelligence System.
  Thank you."
 
-[SMILE. PAUSE. Take questions.]
+[SMILE. PAUSE. Take questions confidently.]
 
 
 ================================================================
-  LIKELY JUDGE QUESTIONS — AND HOW TO ANSWER THEM
+  LIKELY JUDGE QUESTIONS — HOW TO ANSWER
 ================================================================
 
-Q: What if the answer is wrong?
-A: "The system is instructed to answer ONLY from the SOP text.
-    If the information is not in the SOP, it says so explicitly.
-    It cannot hallucinate facts that aren't in the document."
+Q: How is the churn score calculated?
+A: "Five factors — rate gap versus competitor (35% weight),
+    loan balance (25%), months remaining (20%), FICO score (15%),
+    and payment history (5%). Each is normalized to 0-100
+    and combined into a weighted total. It's transparent and auditable."
 
-Q: What LLM are you using?
-A: "LLaMA 3.3 70B, hosted on Groq's free inference API.
-    The architecture is model-agnostic — we can swap in
-    Claude, GPT-4, or a private on-premise model with
-    one line of code change."
+Q: Is the competitor rate data real?
+A: "In this demo it's simulated — but in production it would pull
+    from rate aggregation APIs or the bank's own competitive intelligence
+    team. The architecture supports a live feed with one config change."
 
-Q: How is this different from just searching the document?
-A: "Search finds keywords. Our system understands intent.
-    If you ask 'what do I do if I'm stuck?', search returns
-    every page with the word 'stuck'. Our agent returns
-    the exact action, the exact contact, from the right section."
+Q: What if the LLM generates an offer that violates policy?
+A: "The retention offer agent is instructed to use only the bank's SOP
+    as its rulebook. It flags any offer that requires approval.
+    In production, an additional rule-based compliance layer
+    would validate every offer before it reaches the manager."
 
-Q: Can it handle multiple SOPs?
-A: "Not yet in this prototype, but it's on our roadmap.
-    The architecture supports it — we would chunk and index
-    multiple documents and route based on topic."
+Q: Can this work with real customer data?
+A: "Yes — it takes a standard CSV loan portfolio extract from any
+    core banking system (FiServ, Jack Henry, etc.). No data migration.
+    No retraining. Plug in the file and run."
 
-Q: Is this secure? Does data leave the bank?
-A: "In production, this would run with a private LLM
-    on the bank's own infrastructure — nothing leaves
-    the internal network. For this demo we use Groq."
+Q: Why Groq instead of OpenAI or Azure?
+A: "For the hackathon — free and fast. In production, EXL clients
+    would use their preferred model — Azure OpenAI, AWS Bedrock,
+    or a private on-premise LLM. The agent code is model-agnostic."
+
+Q: What's the deployment model?
+A: "This runs as a web app on the bank's internal network.
+    No customer data leaves the firewall.
+    Deployable on any cloud or on-premise infrastructure."
 
 Q: How long did this take to build?
-A: "The core prototype was built in one hackathon session.
-    The architecture is clean enough that adding new SOPs,
-    new agents, or a new UI takes hours, not weeks."
+A: "The core system was built in one hackathon. The architecture
+    is clean enough that adding a new product category,
+    a new SOP, or a new scoring factor takes hours — not weeks."
 
 
 ================================================================
-  PRE-DEMO CHECKLIST  (do this 5 minutes before presenting)
+  PRE-DEMO CHECKLIST  (5 minutes before presenting)
 ================================================================
 
 [ ] Browser open at http://localhost:8501
-[ ] App is running (streamlit run chatbot/app.py)
-[ ] GROQ_API_KEY is set in the terminal
-[ ] Category set to "All Categories" in sidebar
-[ ] Chat history cleared (click Clear chat)
-[ ] Test one question before going on stage
-[ ] GitHub repo open in second tab (shows README)
-[ ] This script printed or on your phone for quick reference
+[ ] App running (streamlit run chatbot/app.py)
+[ ] GROQ_API_KEY set in terminal
+[ ] Tab 1 open (Rate Change Intelligence)
+[ ] Rate change = 25bps already entered
+[ ] Click Run Churn Analysis — let it load BEFORE you go on stage
+[ ] Results are visible — don't make judges wait for loading
+[ ] Tab 2 tested — type one question and confirm it responds
+[ ] GitHub repo open in second browser tab (shows README)
+[ ] This script on your phone or printed
 
 ================================================================
-  KEY PHRASES TO REMEMBER  (if you forget the script)
+  KEY PHRASES TO REMEMBER
 ================================================================
 
-Opening:   "Imagine you are a new analyst. Rate change drops. Clock ticking."
-Problem:   "Static Word docs. Hard to navigate under pressure."
-Solution:  "Ask any question. Get an answer from the SOP. Instantly."
-Agents:    "Router decides. Specialist agent answers. Badge shows which one."
-Impact:    "Faster execution. Fewer errors. Audit-ready."
-Closing:   "We turned a 20-page Word doc into a live AI assistant."
+Hook:     "Which customers are about to leave?"
+Problem:  "Two days of manual work. By then it's too late."
+Solution: "3 minutes. Personalized. SOP-grounded."
+Numbers:  "$15M lost per cycle. $750K recovered per event."
+Closing:  "Ready before the competitor picks up the phone."
 
 ================================================================

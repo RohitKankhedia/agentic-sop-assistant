@@ -45,7 +45,7 @@ def get_best_competitor_rate(competitors: pd.DataFrame, product: str, tier: str)
     return subset["CompetitorRate"].min()
 
 
-def score_portfolio(rate_change_bps: float) -> pd.DataFrame:
+def score_portfolio(rate_change_bps: float = 25) -> pd.DataFrame:
     """
     Main function. Takes the Fed rate change in basis points (e.g. 25 for +0.25%).
     Returns the full portfolio DataFrame with churn scores added.
@@ -54,15 +54,23 @@ def score_portfolio(rate_change_bps: float) -> pd.DataFrame:
 
     rate_change_pct = rate_change_bps / 100.0
 
-    # Apply rate change to current customer rates (variable rate products)
-    # Business Banking is floating rate — moves with Fed
-    # Auto loans are fixed — new originations only get new rate
+    # Apply rate change to current customer rates
+    # Business Banking = floating (moves with Fed immediately)
+    # Auto loans = fixed (existing loans unchanged)
+    # For rate cuts: competitor rates also drop proportionally
     portfolio["NewRate"] = portfolio.apply(
-        lambda r: round(r["CurrentRate"] + rate_change_pct, 2)
+        lambda r: round(max(r["CurrentRate"] + rate_change_pct, 1.0), 2)
         if r["Product"] == "Business Banking"
         else r["CurrentRate"],
         axis=1
     )
+
+    # For rate cuts, competitors also drop — reduce their rates too
+    if rate_change_bps < 0:
+        competitors = competitors.copy()
+        competitors["CompetitorRate"] = (
+            competitors["CompetitorRate"] + rate_change_pct
+        ).clip(lower=1.0).round(2)
 
     scores = []
 

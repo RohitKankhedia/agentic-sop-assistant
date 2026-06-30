@@ -38,6 +38,23 @@ st.set_page_config(
     layout="wide"
 )
 
+# ── EXL Branding Header ────────────────────────────────────────────────
+st.markdown("""
+<div style='background: linear-gradient(90deg, #003087 0%, #0057B8 100%);
+     padding: 12px 24px; border-radius: 8px; margin-bottom: 16px;
+     display: flex; align-items: center; justify-content: space-between;'>
+  <div>
+    <span style='color: white; font-size: 1.4em; font-weight: 800;
+          letter-spacing: 2px;'>EXL</span>
+    <span style='color: #90CAF9; font-size: 0.9em; margin-left: 12px;'>
+          Analytics · AI · Operations</span>
+  </div>
+  <div style='color: #90CAF9; font-size: 0.85em;'>
+    🏦 Banking Client Solution &nbsp;|&nbsp; EXL Hackathon 2026
+  </div>
+</div>
+""", unsafe_allow_html=True)
+
 # ── Groq client ────────────────────────────────────────────────────────
 @st.cache_resource
 def get_client():
